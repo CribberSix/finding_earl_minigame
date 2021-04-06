@@ -10,5 +10,5 @@ class Parser:
         if input_text == "help":
             return "Useful commands: \n" \
                    "    Only 'help' implemented - yet."
-
-        return None
+        else:
+            return "That is not a verb I recognize."

@@ -1,12 +1,12 @@
 import pygame
-from src.Video.Visualiser import Visualiser
+from src.Video.VisualiserOneLiner import VisualiserOneLiner
 
 
 class CommandModule:
 
-    def __init__(self, x, y, w):
+    def __init__(self, x, y, w, h):
         self.current = ""
-        self.visualiser = Visualiser(x, y, w)
+        self.visualiser = VisualiserOneLiner(x, y, w, h)
         self.visualiser.update_text("> " + self.current)
         self.history = [""]
         self.index_h = 0
@@ -32,13 +32,13 @@ class CommandModule:
                 self.history.append(self.current.strip())
                 self.current = ""  # reset
                 self.index_h = 0  # reset
-                self.visualiser.update_text("> " + self.current)
+                self.visualiser.update_text(self.current)
                 return self.history[-1]  # return last entry
 
             elif event.unicode.isalpha():  # This covers all letters and numbers
                 self.current += event.unicode
 
-        self.visualiser.update_text("> " + self.current)
+        self.visualiser.update_text(self.current)
         return None
 
     def render_text(self):

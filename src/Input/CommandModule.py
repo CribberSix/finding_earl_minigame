@@ -33,7 +33,8 @@ class CommandModule:
                 self.current = ""  # reset
                 self.index_h = 0  # reset
                 self.visualiser.update_text(self.current)
-                return self.history[-1]  # return last entry
+                if self.history[-1] != "":
+                    return self.history[-1]  # return last entry
 
             elif event.unicode.isalpha():  # This covers all letters and numbers
                 self.current += event.unicode

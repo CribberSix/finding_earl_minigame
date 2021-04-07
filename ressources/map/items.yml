@@ -1,0 +1,53 @@
+
+# ITEMS:
+
+"1":   # the unique key
+    "name": "item-name"
+    "adjective": "descriptive-adjective" # in case there are more than one
+    "inspection": "Text to show upon inspecting the item."
+    "location":  "inventory" #  "On the table" -> if it is still in a room
+    "collect": true  # for take, drop and put
+    "open": false  # if true allows for contains-items to be shown and interacted with
+    "contains":      # which items are inside the item
+          - "id"
+          - "id2"
+    "read": true  # has some information within
+    "information": "This would be the example text to read."
+
+
+
+"2":
+    "name": "leaflet"
+    "adjective": "yellow"
+    "inspection": "The leaflet is old and yellow, there is some writing on it."
+    "location":  "on the table"
+    "collect": true  # for take, drop and put
+    "open": false
+    "contains":
+    "read": true  # has some information within
+    "information": "This would be the example text to show when reading the leaftlet."
+
+
+"3":
+    "name": "carpet"
+    "adjective": "red"
+    "inspection": "The leaflet is old and yellow, there is some writing on it."
+    "location":  "centered in the middle of the room, on the floor"
+    "collect": false  # for take, drop and put
+    "open": false
+    "contains":
+    "read": false  # has some information within
+    "information":
+
+
+"4":   # the unique key
+    "name": "table"
+    "adjective": "old"
+    "inspection": "The table is old and wonky, the legs uneven. It obviously was put there more for practical use than for decoration."
+    "location":  " in the corner of the room"
+    "collect": true
+    "open": false
+    "contains":
+    "read": false
+    "information":
+

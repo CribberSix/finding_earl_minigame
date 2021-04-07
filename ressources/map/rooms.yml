@@ -1,0 +1,33 @@
+
+
+"Foyer":
+   "items":  # list of item Ids
+     - "2"
+     - "4"
+     - "3"
+   "description": "You are in a foyer which is dimly lit by an old flickering lamp at the ceiling.
+   The wooden walls have small gaps and seem to come apart in some places."
+   "path_description": "You can see a kitchen through an open door to your left and a long dark hallway ahead.
+    To your right you notice a bathroom."
+
+
+"Kitchen":
+  "items":
+  "description": "The kitchen is bathed in a warm light and it seems to have been cleaned recently."
+  "path_description": "You can see the foyer through the door to the right."
+
+
+"Hallway" :
+
+
+"Living Room":
+
+
+
+"Bathroom":
+
+
+
+
+
+

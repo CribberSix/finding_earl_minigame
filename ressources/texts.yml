@@ -1,0 +1,16 @@
+
+
+"help": "Useful commands:
+      \n 'help' - shows this text
+      \n 'info' - shows some information about the game
+      \n 'look' - shows what the character can see around him
+
+      \n\nYou are dealing with a fairly stupid parser.
+      \n\nThe parser tries to match the input's first word - needs to be a <verb> - to a game functionality.
+      \nCertain verbs require further input, for example what the <object> of the verb is. Some verbs
+      work without further input and may even ignore further input.
+      \n\nThe parser will tell you if he does not know a verb or if he needs further information, so
+      the best thing to do is to try it out!
+      "
+
+"info": "Credits: This game was created by CribberSix."

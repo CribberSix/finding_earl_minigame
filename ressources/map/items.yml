@@ -1,53 +1,193 @@
 
-# ITEMS:
+# 1 -> TEMPLATE
 
 "1":   # the unique key
+    "id": "1"  # key repeated for the resulting JSON object
     "name": "item-name"
     "adjective": "descriptive-adjective" # in case there are more than one
-    "inspection": "Text to show upon inspecting the item."
-    "location":  "inventory" #  "On the table" -> if it is still in a room
-    "collect": true  # for take, drop and put
-    "open": false  # if true allows for contains-items to be shown and interacted with
+    "inspection": "Text to show upon inspecting the item"  # without dot at the end!
+    "location":  "on the floor" #  "On the table" -> if it is still in a room
+    "collect": false  # for take, drop and put
+    "open": false  # if true allows object to be opened
+    "opened": false  # if true, the contained items are shown
+    "locked": false  # if locked, cannot be opened without a key.
+    "lockedby":  "id" # the id with which it has to be unlocked
     "contains":      # which items are inside the item
           - "id"
           - "id2"
-    "read": true  # has some information within
-    "information": "This would be the example text to read."
-
-
-
 "2":
+    "id": "2"
     "name": "leaflet"
     "adjective": "yellow"
-    "inspection": "The leaflet is old and yellow, there is some writing on it."
+    "inspection": "The leaflet is old and yellow, there is some writing on it:
+                \n\n\"Welcome to CribberSix's text-based adventure game!
+                \nSomewhere in this house, there is a teddy bear... can you find it for me please?\""
     "location":  "on the table"
     "collect": true  # for take, drop and put
     "open": false
+    "opened": false
+    "locked": false
+    "lockedby":
     "contains":
-    "read": true  # has some information within
-    "information": "This would be the example text to show when reading the leaftlet."
-
 
 "3":
+    "id": "3"
     "name": "carpet"
-    "adjective": "red"
-    "inspection": "The leaflet is old and yellow, there is some writing on it."
-    "location":  "centered in the middle of the room, on the floor"
-    "collect": false  # for take, drop and put
+    "adjective": "dark"
+    "inspection": "The carpet looks dusty."
+    "location":  "centered in the middle of the room"
+    "collect": false
     "open": false
+    "opened": false
+    "locked": false
+    "lockedby":
     "contains":
-    "read": false  # has some information within
-    "information":
 
-
-"4":   # the unique key
+"4":
+    "id": "4"
     "name": "table"
     "adjective": "old"
     "inspection": "The table is old and wonky, the legs uneven. It obviously was put there more for practical use than for decoration."
-    "location":  " in the corner of the room"
+    "location":  "in the corner of the room"
+    "collect": false
+    "open": false
+    "opened": false
+    "locked": false
+    "lockedby":
+    "contains":
+
+"5":
+    "id": "5"
+    "name": "fridge"
+    "adjective": "blue"
+    "inspection": "The fridge is a bit rusty around the angles, but overall in good shape."
+    "location":  "in the corner of the room"
+    "collect": false
+    "open": true  # can be opened
+    "opened": false # but is closed
+    "locked": true # and locked
+    "lockedby": "14"
+    "contains":
+        - "6"
+        - "12"
+
+"6":
+    "id": "6"
+    "name": "apple"
+    "adjective": "red"
+    "inspection": "The apple looks delicious."
+    "location":  "in the lower compartment of the fridge"
     "collect": true
     "open": false
+    "opened": false
+    "locked": false
+    "lockedby":
     "contains":
-    "read": false
-    "information":
 
+"7":
+    "id": "7"
+    "name": "key"
+    "adjective": "red"
+    "inspection": "The key is shaped like an octopus."
+    "location":  "hanging off of a nail on the wall ahead"
+    "collect": true
+    "open": false
+    "opened": false
+    "locked": false
+    "lockedby":
+    "contains":
+
+"14":
+    "id": "14"
+    "name": "key"
+    "adjective": "blue"
+    "inspection": "The key is shaped like an octopus."
+    "location":  "hanging off of a nail on the wall ahead"
+    "collect": true
+    "open": false
+    "opened": false
+    "locked": false
+    "lockedby":
+    "contains":
+
+"8":
+    "id": "8"
+    "name": "shower"
+    "adjective": "small"
+    "inspection": "It's a shower, what did you expect?"
+    "location":  "to your left"
+    "collect": false
+    "open": false
+    "opened": false
+    "locked": false
+    "lockedby":
+    "contains":
+
+"9":
+    "id": "9"
+    "name": "toilet"
+    "adjective": "french"
+    "inspection": "It doesn't look like it has been used in a while."
+    "location":  "on the right wall"
+    "collect": false
+    "open": false
+    "opened": false
+    "locked": false
+    "lockedby":
+    "contains":
+
+"10":
+    "id": "10"
+    "name": "sink"
+    "adjective": "white"
+    "inspection": "The handles of the water tap are missing, they seem to have been screwed off."
+    "location":  "opposite the door"
+    "collect": false
+    "open": false
+    "opened": false
+    "locked": false
+    "lockedby":
+    "contains":
+
+
+"12":
+    "id": "12"
+    "name": "teddybear"
+    "adjective": "fluffy"
+    "inspection": "The teddy bear is a deep brown and has big ears in a brighter shade. He feels very fluffy."
+    "location":  "in the corner."
+    "collect": true
+    "open": false
+    "opened": false
+    "locked": false
+    "lockedby":
+    "contains":
+
+"13":
+    "id": "13"
+    "name": "chest"
+    "adjective": "red"
+    "inspection": "The chest has a locking mechanism in front."
+    "location":  "on the floor"
+    "collect": false
+    "open": true
+    "opened": false
+    "locked": true
+    "lockedby": "7"
+    "contains":
+        - "11"
+        - "14"
+
+"11":
+    "id": "11"
+    "name": "note"
+    "adjective": "small"
+    "inspection": "The note has some writing on it:
+                \n\n\"Did you think it would be this easy?\""
+    "location":  "on the table"
+    "collect": true  # for take, drop and put
+    "open": false
+    "opened": false
+    "locked": false
+    "lockedby":
+    "contains":

@@ -2,29 +2,63 @@
 
 "Foyer":
    "items":  # list of item Ids
-     - "2"
-     - "4"
-     - "3"
-   "description": "You are in a foyer which is dimly lit by an old flickering lamp at the ceiling.
-   The wooden walls have small gaps and seem to come apart in some places."
+     - "2"  # yellow leaflet
+     - "3"  # dark carpet
+     - "4"  # old table
+   "description": "You are in a foyer which is dimly lit by an old flickering lamp at the ceiling."
    "path_description": "You can see a kitchen through an open door to your left and a long dark hallway ahead.
     To your right you notice a bathroom."
-
+   "paths":
+        "right": "Bathroom"
+        "left": "Kitchen"
+        "forward": "Hallway"
+        "backward":
 
 "Kitchen":
   "items":
-  "description": "The kitchen is bathed in a warm light and it seems to have been cleaned recently."
+    - "5"  # fridge
+  "description": "The kitchen is bathed in a warm light."
   "path_description": "You can see the foyer through the door to the right."
-
+  "paths":
+      "right": "Foyer"
+      "left":
+      "forward":
+      "backward":
 
 "Hallway" :
-
+  "items":
+  "description": "The hallway is very dark."
+  "path_description": "The living room is ahead of you and the foyer behind you."
+  "paths":
+      "right":
+      "left":
+      "forward": "Living Room"
+      "backward": "Foyer"
 
 "Living Room":
-
-
+  "items":
+    - "7"  # red key
+    - "13"  # red chest
+  "description": "The living room looks very comfortable."
+  "path_description": "Behind you is the dark hallway."
+  "paths":
+      "right":
+      "left":
+      "forward":
+      "backward": "Hallway"
 
 "Bathroom":
+  "items":
+    - "8"  # small shower
+    - "9"  # french toilet
+    - "10"  # white sink
+  "description": "The white tiles of the bathroom give it the appearance of very clean room, even though there is some dirt on the floor."
+  "path_description": "You can see the foyer through the door to the right."
+  "paths":
+      "right":
+      "left": "Foyer"
+      "forward":
+      "backward":
 
 
 

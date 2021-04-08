@@ -10,7 +10,7 @@ pygame.font.init()
 
 # ________________ PYGAME SETUP ________________ #
 systemWidth = 600
-systemHeight = 500
+systemHeight = 800
 screen = pygame.display.set_mode((systemWidth, systemHeight))
 pygame.display.set_caption("Zork - The adventure awaits!")
 clock = pygame.time.Clock()
@@ -46,21 +46,28 @@ while True:
         visualiser.update_text(current_text)
 
         # parse user input
-        parser_output = parser.receive_input(cmd_output)
+        parser_success, parser_output = parser.receive_input(cmd_output)
 
         # if the parser failed -> print the parser's message
-        if parser_output is not None and parser_output[0] == 0:
-            current_text += "\n" + parser_output[1]
+        if parser_output is not None and parser_success == 0:
+            current_text += "\n" + parser_output[0]
             visualiser.update_text(current_text)
 
-        # if the  parser succeeded -> handle parsed input in the GameState class
-        elif parser_output is not None and parser_output[0] == 1:
-            game_output = game.receive_input(parser_output[1])
+        # if the parser succeeded -> handle parsed input in the GameState class
+        elif parser_output is not None and parser_success == 1:
+            game_output = game.receive_input(parser_output)
 
             # print the game's message
             if game_output is not None:
                 current_text += "\n" + game_output
                 visualiser.update_text(current_text)
+
+            win_condition = game.check_winning_condition()
+            # print the game's win_condition
+            if win_condition is not None:
+                current_text += "\n" + win_condition
+                visualiser.update_text(current_text)
+
 
     # display
     pygame.display.get_surface().fill((200, 200, 200))  # background

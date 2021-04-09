@@ -1,4 +1,4 @@
-# Text-based adventure: Finding Earl
+# A text-based adventure: Finding Earl
 
 
 ![Earl](ressources/bear_50x50.png) 

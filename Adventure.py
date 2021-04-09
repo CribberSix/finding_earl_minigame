@@ -12,11 +12,14 @@ pygame.font.init()
 systemWidth = 600
 systemHeight = 800
 screen = pygame.display.set_mode((systemWidth, systemHeight))
-pygame.display.set_caption("Zork - The adventure awaits!")
+pygame.display.set_caption("Finding Earl")
+gameIcon = pygame.image.load('ressources/bear.png')
+pygame.display.set_icon(gameIcon)
+
 clock = pygame.time.Clock()
 
 # Instantiate classes
-current_text = "You wake up, your dizzy head hurting. There is not much you can remember... "
+current_text = "You wake up, your head dizzy. There is not much you can remember... "
 visualiser = Visualiser(systemWidth * 0.1, systemHeight * 0.1, systemWidth * 0.8, systemHeight * 0.7, current_text)
 cmd = CommandModule(systemWidth * 0.1, systemHeight * 0.8, systemWidth * 0.8, systemHeight * 0.1)
 parser = Parser()

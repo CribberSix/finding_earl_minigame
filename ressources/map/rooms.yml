@@ -2,10 +2,10 @@
 
 "Foyer":
    "items":  # list of item Ids
-     - "2"  # yellow leaflet
      - "3"  # dark carpet
      - "4"  # old table
-   "description": "You are in a foyer which is dimly lit by an old flickering lamp at the ceiling."
+     - "2"  # yellow leaflet
+   "description": "You are in the foyer of the house."
    "path_description": "You can see a kitchen through an open door to your left and a long dark hallway ahead.
     To your right you notice a bathroom."
    "paths":
@@ -16,6 +16,7 @@
 
 "Kitchen":
   "items":
+    - "15"
     - "5"  # fridge
   "description": "The kitchen is bathed in a warm light."
   "path_description": "You can see the foyer through the door to the right."
@@ -27,7 +28,8 @@
 
 "Hallway" :
   "items":
-  "description": "The hallway is very dark."
+    - "1" # flickering lamp
+  "description": "The hallway is dimly lit."
   "path_description": "The living room is ahead of you and the foyer behind you."
   "paths":
       "right":

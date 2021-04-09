@@ -1,8 +1,8 @@
 
 # 1 -> TEMPLATE
 
-"1":   # the unique key
-    "id": "1"  # key repeated for the resulting JSON object
+"0":   # the unique key
+    "id": "0"  # key repeated for the resulting JSON object
     "name": "item-name"
     "adjective": "descriptive-adjective" # in case there are more than one
     "inspection": "Text to show upon inspecting the item"  # without dot at the end!
@@ -15,13 +15,27 @@
     "contains":      # which items are inside the item
           - "id"
           - "id2"
+
+"1":   # the unique key
+    "id": "1"  # key repeated for the resulting JSON object
+    "name": "lamp"
+    "adjective": "flickering" # in case there are more than one
+    "inspection": "It seems to be quite old and could need a new light bulb"
+    "location":  "at the ceiling"
+    "collect": false
+    "open": false
+    "opened": false
+    "locked": false
+    "lockedby":
+    "contains":
+
 "2":
     "id": "2"
     "name": "leaflet"
     "adjective": "yellow"
     "inspection": "The leaflet is old and yellow, there is some writing on it:
-                \n\n\"Welcome to CribberSix's text-based adventure game!
-                \nSomewhere in this house, there is a teddy bear... can you find it for me please?\""
+                \n\n'Welcome to CribberSix's text-based adventure game!
+                \n\nSomewhere in this house, there is a fluffy teddybear named Earl... can you find it for me please?'"
     "location":  "on the table"
     "collect": true  # for take, drop and put
     "open": false
@@ -33,7 +47,7 @@
 "3":
     "id": "3"
     "name": "carpet"
-    "adjective": "dark"
+    "adjective": "plush"
     "inspection": "The carpet looks dusty."
     "location":  "centered in the middle of the room"
     "collect": false
@@ -127,7 +141,7 @@
     "id": "9"
     "name": "toilet"
     "adjective": "french"
-    "inspection": "It doesn't look like it has been used in a while."
+    "inspection": "It's a fancy french toilet."
     "location":  "on the right wall"
     "collect": false
     "open": false
@@ -175,7 +189,6 @@
     "locked": true
     "lockedby": "7"
     "contains":
-        - "11"
         - "14"
 
 "11":
@@ -183,7 +196,7 @@
     "name": "note"
     "adjective": "small"
     "inspection": "The note has some writing on it:
-                \n\n\"Did you think it would be this easy?\""
+                \n\n'Did you think it would be this easy?'"
     "location":  "on the table"
     "collect": true  # for take, drop and put
     "open": false
@@ -191,3 +204,17 @@
     "locked": false
     "lockedby":
     "contains":
+
+"15":
+    "id": "15"
+    "name": "cabinet"
+    "adjective": "wooden"
+    "inspection": "The cabinet is made of mahagony wood and looks expensive."
+    "location":  "on the left"
+    "collect": false
+    "open": true
+    "opened": false
+    "locked": false
+    "lockedby":
+    "contains":
+        - "11"

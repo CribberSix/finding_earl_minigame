@@ -37,7 +37,7 @@ class Parser:
             return self.parse_one_word_command()
         elif self.last_input[0] in ("go", "walk"):
             return self.parse_go()
-        elif self.last_input[0] in ("inspect", "take", "drop", "open"):
+        elif self.last_input[0] in ("inspect", "read", "take", "drop", "open"):
             return self.parse_object_command()
 
         else:

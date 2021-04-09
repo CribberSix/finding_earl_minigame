@@ -4,10 +4,11 @@
       \n 'help' - shows this text
       \n 'info' - shows some information about the game
       \n 'look' - shows what the character can see
-      \n 'inspect' - shows more details on a specific object
+      \n 'read' or 'inspect' - shows more details on a specific object
       \n 'i' or 'inventory' - shows the inventory
       \n 'take' - takes an object to inventory
       \n 'drop' - drops an object to the floor
+      \n 'open' or 'open ... with ...' - opens an object
       \n 'go' or 'walk' - let's you move around. Acceptable directions are: north\\forward, west\\right, south\\backward, east\\left
 
       \n\nThe algorithm tries to match the input's first word - needs to be a <verb> - to a game functionality.
@@ -17,4 +18,16 @@
       the best thing to do is to try it out!
       "
 
-"info": "Credits: This game was created by CribberSix."
+"info": "\n'Finding Earl' is a text-based adventure game created by CribberSix.
+        \n\nThe idea for the text-based approach
+        originated from the TV-series 'Chuck' where the 1980 video game 'Zork' was mentioned. "
+
+"win": "
+         \n          *
+         \n         /_\\
+         \n       { 0_0 }
+         \n        ( Y )
+         \n       ()~*~()
+         \n       (_)-(_)
+         \n\nCongratulations! You found Earl! \n\nFeel free to walk around and explore all rooms and items
+         if you haven't already. Thank you for playing!"

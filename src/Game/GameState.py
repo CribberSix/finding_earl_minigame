@@ -33,11 +33,11 @@ class GameState:
             return self.info()
         elif command[0] == "look":
             return self.look()
-        elif command[0] == "inventory":
+        elif command[0] in ("inventory", "i"):
             return self.inventory()
         elif command[0] == "go":
             return self.go(command[1])
-        elif command[0] == "inspect":
+        elif command[0] in ("inspect", "read"):
             return self.inspect(command[1:])
         elif command[0] == "take":
             return self.take(command[1:])
@@ -81,11 +81,13 @@ class GameState:
             if c_length == 4:
                 adjective_with = command_string[2]
                 name_with = command_string[3]
-                print(f"C2 - opening {name_open} with {adjective_with} {name_with}")
+                # print(f"C2 - opening {name_open} with {adjective_with} {name_with}")
             elif c_length == 3:
                 adjective_with = None
                 name_with = command_string[2]
-                print(f"C3 - opening {name_open} with {adjective_with} {name_with}")
+                # print(f"C3 - opening {name_open} with {name_with}")
+            elif c_length == 2:
+                return "With what?"
 
         elif with_index == 2:  # with as third word
             adjective_open = command_string[0]
@@ -93,11 +95,13 @@ class GameState:
             if c_length == 5:
                 adjective_with = command_string[3]
                 name_with = command_string[4]
-                print(f"C5 - opening {adjective_open} {name_open} with {adjective_with} {name_with}")
+                # print(f"C5 - opening {adjective_open} {name_open} with {adjective_with} {name_with}")
             elif c_length == 4:
                 adjective_with = None
                 name_with = command_string[3]
-                print(f"C4 - opening {adjective_open} {name_open} with {name_with}")
+                # print(f"C4 - opening {adjective_open} {name_open} with {name_with}")
+            elif c_length == 3:
+                return "With what?"
         else:
             return "I don't understand the structure of your sentence. Open it with what?"
 
@@ -118,23 +122,19 @@ class GameState:
             if self.items[to_open_objects[0]["id"]]["lockedby"] != open_with_objects[0]["id"]:
                 return "This doesn't seem to work..."
 
-            self.items[to_open_objects[0]["id"]]["locked"] = False
-            self.items[to_open_objects[0]["id"]]["open"] = True
-            self.items[to_open_objects[0]["id"]]["opened"] = True
-            self.character.inventory.remove(open_with_objects[0]["id"])  # remove the key from the inventory
+            self.items[to_open_objects[0]["id"]]["locked"] = False  # unlock
+            self.items[to_open_objects[0]["id"]]["opened"] = True   # is opened
 
             return f"You use the {open_with_objects[0]['adjective']} {open_with_objects[0]['name']} to open " \
                    f"the {to_open_objects[0]['adjective']} {to_open_objects[0]['name']}. " + \
                    self.inspect([to_open_objects[0]["adjective"], to_open_objects[0]["name"]])
 
-
-
     def open(self, description):
         """
         Syntax:  open... <optional-ajdective> <object>
 
-        :param command_str:
-        :return:
+        :param description: Strings > the object description
+        :return: String
         """
         # retrieve matching items
         adjective, object_name = self.parse_description(description)
@@ -158,13 +158,21 @@ class GameState:
         """
         Checks if the teddy bear is in the character's inventory - once it is, we display the congratulatory message.
 
-        :return:
+        :return: String or None
         """
         if not self.displayed_win:
             if len(self.get_inventory_items_by_name("teddybear", "fluffy")) == 1:
                 self.displayed_win = True
-                return "\n\nCongratulations! You found the teddybear! \n\nFeel free to walk around and explore all rooms and items " \
-                       "if you haven't already. \nThank you for playing!"
+                return self.texts["win"]
+                return "" \
+                       "\n          *" \
+                       "\n         /_\\" \
+                       "\n       { 0_0 } " \
+                       "\n        ( Y )  " \
+                       "\n       ()~*~()    " \
+                       "\n       (_)-(_)    " \
+                       "\n\nCongratulations! You found Earl! \n\nFeel free to walk around and explore all rooms and items " \
+                       "if you haven't already. Thank you for playing!"
 
     def get_inventory_items_by_name(self, name, adjective):
         """
@@ -193,7 +201,6 @@ class GameState:
         :param adjective: String > adjective of the item
         :return: List
         """
-        print("name, adjective", name, adjective)
         objects = []
         if self.rooms[self.room_current]["items"] is not None:
             for obj_id in self.rooms[self.room_current]["items"]:

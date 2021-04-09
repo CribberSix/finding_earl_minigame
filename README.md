@@ -1,9 +1,12 @@
 # Text-based adventure: Finding Earl
 
+
+![Earl](ressources/bear_50x50.png) 
+
 'Finding Earl' is a text-based adventure game created by CribberSix.
 
 The idea for the text-based approach originated from the TV-series 'Chuck' where 
-the 1980 video game 'Zork' was mentioned. 
+the 1980 text-based video game 'Zork' was mentioned. 
 
 
 ##### Useful commands
@@ -18,10 +21,11 @@ the 1980 video game 'Zork' was mentioned.
 - 'go' or 'walk' - let's you move around. Acceptable directions are: north\\forward, west\\right, south\\backward, east\\left
 
 ##### Parser
-The algorithm tries to match the input's first word - needs to be a <verb> - to a game functionality.
+The algorithm tries to match the input's first word - needs to be a **verb** - to a game functionality.
+Some verbs work without further input.
+Other  verbs require further input, for example what the **object** of the verb is. If there are more than one of the
+desired objects around, you will need to specificy which one you mean with a **descriptive ajdective**, for instance *purple book* . 
 
-Certain verbs require further input, for example what the <object> of the verb is. Some verbs
-work without further input and may even ignore further input.
 
 The parser will tell you if he does not know a verb or if he needs further information, so
 the best thing to do is to try it out!

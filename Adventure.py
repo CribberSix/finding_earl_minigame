@@ -71,7 +71,6 @@ while True:
                 current_text += "\n" + win_condition
                 visualiser.update_text(current_text)
 
-
     # display
     pygame.display.get_surface().fill((200, 200, 200))  # background
     visualiser.render_text()  # instructional text

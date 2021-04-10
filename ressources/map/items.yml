@@ -218,3 +218,17 @@
     "lockedby":
     "contains":
         - "11"
+
+
+"16":
+    "id": "16"
+    "name": "dirt"
+    "adjective": "brown"
+    "inspection": "It's dirt, it looks a bit disgusting."
+    "location":  "on the floor"
+    "collect": true  # for take, drop and put
+    "open": false
+    "opened": false
+    "locked": false
+    "lockedby":
+    "contains":

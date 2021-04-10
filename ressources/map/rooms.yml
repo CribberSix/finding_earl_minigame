@@ -19,10 +19,10 @@
     - "15"
     - "5"  # fridge
   "description": "The kitchen is bathed in a warm light."
-  "path_description": "You can see the foyer through the door to the right."
+  "path_description": "You can see the foyer through the door to the left."
   "paths":
-      "right": "Foyer"
-      "left":
+      "right":
+      "left": "Foyer"
       "forward":
       "backward":
 
@@ -51,10 +51,11 @@
 
 "Bathroom":
   "items":
+    - "16"  # brown dirt
     - "8"  # small shower
     - "9"  # french toilet
     - "10"  # white sink
-  "description": "The white tiles of the bathroom give it the appearance of very clean room, even though there is some dirt on the floor."
+  "description": "The white tiles of the bathroom give it a nice appearance."
   "path_description": "You can see the foyer through the door to the right."
   "paths":
       "right":

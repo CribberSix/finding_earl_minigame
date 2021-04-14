@@ -21,8 +21,8 @@
   "description": "The kitchen is bathed in a warm light."
   "path_description": "You can see the foyer through the door to the left."
   "paths":
-      "right":
-      "left": "Foyer"
+      "right": "Foyer"
+      "left":
       "forward":
       "backward":
 
@@ -62,9 +62,3 @@
       "left": "Foyer"
       "forward":
       "backward":
-
-
-
-
-
-

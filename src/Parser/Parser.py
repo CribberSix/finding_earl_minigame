@@ -90,13 +90,13 @@ class Parser:
             pass  # we don't expect any other arguments
 
         # Map various expressions to the game functionality
-        if desired_direction == "west":
+        if desired_direction in ["west", "left"]:
             return 1, ["go", "left"]
-        elif desired_direction == "north":
-            return 1, ["go", "forward", "forwards"]
-        elif desired_direction == "south":
-            return 1, ["go", "backward", "backwards"]
-        elif desired_direction == "east":
+        elif desired_direction in ["north", "forwards", "forward"]:
+            return 1, ["go", "forward"]
+        elif desired_direction in ["south", "backwards", "backward"]:
+            return 1, ["go", "backward"]
+        elif desired_direction in ["east", "right"]:
             return 1, ["go", "right"]
         else:
             return 1, ["go", desired_direction]

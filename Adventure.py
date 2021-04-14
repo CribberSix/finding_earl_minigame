@@ -19,7 +19,8 @@ pygame.display.set_icon(gameIcon)
 clock = pygame.time.Clock()
 
 # Instantiate classes
-current_text = "You wake up, your head dizzy. There is not much you can remember... \nType <help> to see what you can do here."
+current_text = "You wake up, your head dizzy. There is not much you can remember... " \
+               "\nType 'help' to get to know the game controls. \nType 'look' to see the room you are currently in."
 visualiser = Visualiser(systemWidth * 0.1, systemHeight * 0.1, systemWidth * 0.8, systemHeight * 0.7, current_text)
 cmd = CommandModule(systemWidth * 0.1, systemHeight * 0.8, systemWidth * 0.8, systemHeight * 0.1)
 parser = Parser()

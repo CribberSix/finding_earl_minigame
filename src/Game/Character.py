@@ -3,15 +3,16 @@
 class Character:
 
     def __init__(self):
-        self.hp = 3
-        self.hp_max = 3
         self.inventory = []  # list of item-keys
 
-    def func(self):
-        pass
+    def take(self, obj_id):
+        """
+        Appends an object-id to the inventory.
 
-    def take(self, obj):
-        self.inventory.append(obj)
+        :param obj_id: String
+        :return: None
+        """
+        self.inventory.append(obj_id)
 
     def drop(self, obj_name):
         """

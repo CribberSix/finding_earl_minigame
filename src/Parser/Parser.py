@@ -91,12 +91,12 @@ class Parser:
 
         # Map various expressions to the game functionality
         if desired_direction == "west":
-            return 1, ["go", "right"]
+            return 1, ["go", "left"]
         elif desired_direction == "north":
             return 1, ["go", "forward", "forwards"]
         elif desired_direction == "south":
             return 1, ["go", "backward", "backwards"]
         elif desired_direction == "east":
-            return 1, ["go", "left"]
+            return 1, ["go", "right"]
         else:
             return 1, ["go", desired_direction]

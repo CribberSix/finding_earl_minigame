@@ -10,15 +10,16 @@ the 1980 text-based video game 'Zork' was mentioned.
 
 
 ### Useful commands
-- 'help' - shows this text
-- 'info' - shows some information about the game
-- 'look' - shows what the character can see
-- 'read' or 'inspect' - shows more details on a specific object
-- 'i' or 'inventory' - shows the contents of your inventory
-- 'take' - takes an object to inventory
-- 'drop' - drops an object from the inventory to the floor
-- 'open' or 'open ... with ...' - opens an object (optionally *with* another object such as a key)
-- 'go' or 'walk' - let's you move around. Acceptable directions are: *north\\forward, west\\right, south\\backward, east\\left*
+Useful commands:
+- `help` - shows this text
+- `info` - shows some information about the game
+- `look` - shows what the character can see
+- `read` or `inspect` - shows more details on a specific object
+- `i` or `inventory` - shows the inventory
+- `take` - takes an object to inventory
+- `drop` - drops an object to the floor
+- `open` or `open ... with ...` - opens an object
+- `go` or `walk` - let's you move around. Acceptable directions are: `north`\\`forward`, `west`\\`left`, `south`\\`backward`, `east`\\`right`
 
 ### Parser
 The algorithm tries to match the input's first word - needs to be a **verb** - to a game functionality.

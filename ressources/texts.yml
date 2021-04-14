@@ -9,7 +9,7 @@
       \n 'take' - takes an object to inventory
       \n 'drop' - drops an object to the floor
       \n 'open' or 'open ... with ...' - opens an object
-      \n 'go' or 'walk' - let's you move around. Acceptable directions are: north\\forward, west\\right, south\\backward, east\\left
+      \n 'go' or 'walk' - let's you move around. Acceptable directions are: north\\forward, west\\left, south\\backward, east\\right
 
       \n\nThe algorithm tries to match the input's first word - needs to be a <verb> - to a game functionality.
       \nCertain verbs require further input, for example what the <object> of the verb is. Some verbs

@@ -7,7 +7,8 @@ class Parser:
         It asks for clarification if it couldn't successfully parse the input.
         """
         self.last_input = ""  # no concrete usage so far
-        self.directions = ["west", "east", "south", "north", "forward", "backward", "left", "right"]
+        self.directions\
+            = ["west", "east", "south", "north", "forward", "forwards", "backward", "backwards", "left", "right"]
 
     def receive_input(self, input_text):
         """

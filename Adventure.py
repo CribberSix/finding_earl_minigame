@@ -66,8 +66,8 @@ while True:
                 current_text += "\n" + game_output
                 visualiser.update_text(current_text)
 
+            # check for the game's win_condition
             win_condition = game.check_winning_condition()
-            # print the game's win_condition
             if win_condition is not None:
                 current_text += "\n" + win_condition
                 visualiser.update_text(current_text)

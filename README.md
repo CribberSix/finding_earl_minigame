@@ -34,3 +34,8 @@ the best thing to do is to try it out!
 
 1. Install the necessary requirements with `pip install -r requirements.txt` 
 2. Run the file `Adventure.py`.
+
+
+## License
+
+© CribberSix

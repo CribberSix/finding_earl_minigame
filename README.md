@@ -32,8 +32,9 @@ the best thing to do is to try it out!
 
 ## Running the Game 
 
-1. Install the necessary requirements with `pip install -r requirements.txt` 
-2. Run the file `Adventure.py`.
+1. Install the necessary packages with `pip install -r requirements.txt` 
+2. Run the game with `python Adventure.py`.
+3. Have fun!
 
 
 ## License

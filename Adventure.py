@@ -10,7 +10,7 @@ pygame.font.init()
 
 # ________________ PYGAME SETUP ________________ #
 systemWidth = 600
-systemHeight = 800
+systemHeight = 600
 screen = pygame.display.set_mode((systemWidth, systemHeight))
 pygame.display.set_caption("Finding Earl")
 gameIcon = pygame.image.load('ressources/bear.png')

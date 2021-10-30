@@ -19,13 +19,13 @@ Useful commands:
 - `take` - takes an object to inventory
 - `drop` - drops an object to the floor
 - `open` or `open ... with ...` - opens an object
-- `go` or `walk` - let's you move around. Acceptable directions are: `north`\\`forward`, `west`\\`left`, `south`\\`backward`, `east`\\`right`
+- `go` or `walk` - lets you move around. Acceptable directions are: `north`\\`forward`, `west`\\`left`, `south`\\`backward`, `east`\\`right`
 
 ### Parser
 The algorithm tries to match the input's first word - needs to be a **verb** - to a game functionality.
 Some verbs work as a standalone. 
 Other verbs require further input, for example what the **object** of the verb is. If there are more than one of the
-desired objects around, you will need to specificy which one you mean with a **descriptive ajdective**, for instance *purple book* . 
+desired objects around, you will need to specify which one you mean with a **descriptive adjective**, for instance *purple book* . 
 
 The parser will tell you if he does not know a verb or if he needs further information, so
 the best thing to do is to try it out!
